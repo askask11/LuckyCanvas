@@ -1,0 +1,9 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<footer class="text-center">
+    <br>
+    <hr>
+    Created by Jianqing Gao<br>
+    China ICP Profiling(备案): <a href="http://beian.miit.gov.cn">粤ICP备2020113241号</a>
+    <br><br>
+</footer>

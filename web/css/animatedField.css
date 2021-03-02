@@ -1,0 +1,86 @@
+/*Editor: Johnson Gao 
+Date This File Created: 2020-3-8 14:47:42
+Description Of This Class: This class is used for the animated field where when user click on it can show a surprising effect.
+*/
+/* 
+    Created on : 2020-3-8, 14:47:42
+    Author     : Jianqing Gao
+*/
+
+/**********        ANIMATED TEXT CONTAINER  ******************/
+.animated-text-input-container
+{
+    width: 50%;
+    position: relative;
+    height: 70px;
+    overflow: hidden;
+}
+
+/*The container should behave differently when it is put into the table in order to fit inside.*/
+table .animated-text-input-container
+{
+    width:100%;
+}
+
+
+
+.animated-text-input-container input
+{
+    /*set the size so the form fill out through the div.*/
+    width: 100%;
+    height: 100%;
+    color: #595f6e;/*The text color in the form*/
+    padding-top: 10px;/*The space between the line and the input area*/
+    border: none;
+    /*outline: none;*/
+    background-color: inherit;/*So the form doesn't look weird, same color as background.*/
+
+}
+
+/*the positioning cannot be placed on the input itself, so we
+format the label around the textfield*/
+.animated-text-input-container label
+{
+    position: absolute;/*place it absolute so it covers the input*/
+    bottom:0px;/*the distance on the bottom between it and its ancestor (.form)*/
+    left:0%;/*the d from the left compate to its ancestor element*/
+    width: 100%;/*the width of the underline*/
+    height: 100%;/*the height of the label object we use to format the obj*/
+    /*background: blue;/*inside*/
+    pointer-events: none;/*so that the user doesn't click on the label itself.*/
+    border-bottom: 1px solid black;/*it is the underline of the input*/
+}
+
+.animated-text-input-container label::after
+{
+    content:"";/*create a fake content after ward.*/
+    position: absolute;
+    left: -1px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid blue;
+    transform: translateX(-100%);/*shift to the left for all of it.*/
+    transition: transform 0.3s ease;/*take 0.3 s to */
+}
+.content-name
+{
+    position: absolute;/*Effect: when user click on it, the input start to take place, then the text would go up*/
+    bottom: 5px;/*the distance of bottom between the text and its ancestor element(label)*/
+    left: 0px;/*the distance of left size between the text and its ancestor element(label)*/
+    transition: all 0.3s ease; /*except for the 0.3s,time of transit from the buttom to the top(as the input take place) by default.*/
+}
+
+/**/
+
+.animated-text-input-container input:focus + .label-name .content-name ,/*when user click on it or when the textfield have some contents*/
+.animated-text-input-container input:valid+ .label-name .content-name 
+{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #9999ff;
+}
+.animated-text-input-container input:focus + .label-name::after , .animated-text-input-container input:valid + .label-name::after
+{
+    transform: translateX(0%);
+}

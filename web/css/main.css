@@ -1,0 +1,136 @@
+/*Editor: Johnson Gao 
+Date This File Created: 2020-4-11 15:30:41
+Description Of This Class:
+*/
+/* 
+    Created on : 2020-4-11, 15:30:41
+    Author     : Jianqing Gao
+*/
+
+/*Functional CSS importing*/
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch|Overlock&display=swap');/*Import Google Font*/
+@import url('arrowButtonCss.css');/*import arrow button*/
+@import url('animatedField.css');/*import animated field*/
+@import url("popup-nojs.css");/*no js popup class*/
+
+body
+{
+    font-family: 'Overlock', cursive !important;
+}
+h1, h4
+{
+    font-family: 'Cabin Sketch', cursive;
+}
+
+
+.navbar-font{
+    font-size: 15px !important;
+}
+
+#main-privacy-list li
+{
+    margin-top: 6px;
+    
+}
+
+
+
+/*Priority classes*/
+.pinkBg
+{
+    background-color: pink !important;
+}
+
+.failed
+{
+    background-color:pink; 
+    border-color:red;
+}
+
+.whiteBg
+{
+    background-color: white;
+}
+.red
+{
+    color:red;
+}
+.green
+{
+    color: green;
+}
+.block
+{
+    display: block;
+}
+
+.center-text
+{
+    text-align: center;
+}
+
+.centralized
+{
+    margin: auto;
+}
+
+.no-indent-list
+{
+    /*list-style: none;*/
+    padding-left: 0;
+}
+
+.transparentButton
+{
+    background-color: rgba(255,255,255,0); 
+    border: none;
+}
+
+.hidden
+{
+    display: none;
+    visibility: hidden;
+}
+
+.blue
+{
+    color:blue;
+}
+
+.right
+{
+    display:right !important;
+}
+
+.size32
+{
+    font-size: 32px;
+}
+
+.assignmentDescriptionPopup
+{
+    width: 50%; 
+    overflow: scroll; 
+    max-height: 80%;
+}
+.fadedOut
+{
+    animation: fadeout;
+    animation-duration: 0.4s;
+    display: none;
+}
+.captcha-image
+{
+    width: 100px;
+    height: 39px;
+}
+.help-title, .help-cursor
+{    
+    cursor: help;
+}
+
+.help-underline,.help-title
+{
+    border-bottom: 1px dotted #000;
+    text-decoration: none;
+}
